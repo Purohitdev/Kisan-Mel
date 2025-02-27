@@ -1,4 +1,3 @@
-import React from 'react'
 import Hero from './Hero'
 import Work from './Work'
 import Video from './Video'

@@ -165,7 +165,7 @@
 // export default Partnership;
 
 
-import React, { useEffect, useRef, useState } from "react";
+import  { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import farm1 from "../assets/Est. 2012.png";
