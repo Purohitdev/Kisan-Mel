@@ -124,7 +124,7 @@ function Achievement() {
                         className="absolute top-7 right-[-60px] w-[120px] h-[120px] bg-white border border-gray-200 rounded-full flex items-center justify-center shadow-lg"
                     >
                         <img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOOtTj_-7lK7ebPdLGO_vmqI7JBV9I0P4vIEWWiMIn3nj6QJ1g"
+                            src="/cir.jpeg"
                             alt="Organic Badge"
                             className="w-[80px] h-[80px] mix-blend-multiply"
                         />

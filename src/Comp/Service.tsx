@@ -81,7 +81,7 @@ function Service() {
               ref={(el) => {
                 if (el) boxRefs.current[index] = el;
               }}
-              className="service-box backdrop-blur-lg bg-[#2d4122]/80 border border-white/50 h-fit flex items-center gap-6 p-5 rounded-lg shadow-lg hover:shadow-xl transition-shadow text-white"
+              className="service-box backdrop-blur-lg bg-[#2d4122]/90 border border-white/50 h-fit flex items-center gap-6 p-5 rounded-lg shadow-lg hover:shadow-xl transition-shadow text-white"
             >
               <div className="border rounded-full h-[80px] w-[80px] bg-[#e4e1d8] flex items-center justify-center text-lg font-bold text-[#2d4122]">
                 {index + 1}
@@ -100,7 +100,7 @@ function Service() {
             ref={imageRef}
             src="/farm2.jpg"
             alt="Farm Services"
-            className="w-[100%]  object-cover rounded-xl shadow-lg border border-gray-300"
+            className="w-[90%]  object-cover rounded-xl shadow-lg border border-gray-300"
           />
         </div>
 
@@ -112,7 +112,7 @@ function Service() {
               ref={(el) => {
                 if (el) boxRefs.current[index] = el;
               }}
-              className="service-box backdrop-blur-lg bg-[#2d4122]/80 border border-white/50 h-fit flex items-center gap-6 p-5 rounded-lg shadow-lg hover:shadow-xl transition-shadow text-white"
+              className="service-box backdrop-blur-lg bg-[#2d4122]/90 border border-white/50 h-fit flex items-center gap-6 p-5 rounded-lg shadow-lg hover:shadow-xl transition-shadow text-white"
             >
               <div className="border rounded-full h-[80px] w-[80px] bg-[#e4e1d8] flex items-center justify-center text-lg font-bold text-[#2d4122]">
                 {index + 1}
