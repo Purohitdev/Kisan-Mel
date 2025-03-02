@@ -104,7 +104,7 @@ function Achievement() {
                     ease: "power3.out",
                     scrollTrigger: {
                         trigger: el,
-                        start: "20% top", // Animation triggers when element reaches middle of the screen
+                        start: "40% top", // Animation triggers when element reaches middle of the screen
                         toggleActions: "play none none none",
                     },
                 }
