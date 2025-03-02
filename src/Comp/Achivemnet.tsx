@@ -44,7 +44,6 @@ function Achievement() {
                         start: "top 50%", // Animation starts when top of element reaches mid-screen
                         end: "bottom 50%",
                         toggleActions: "play none none none",
-                        markers:true,
                     },
                 }
             );
