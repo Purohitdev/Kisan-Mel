@@ -106,6 +106,7 @@ function Achievement() {
                         trigger: el,
                         start: "40% top", // Animation triggers when element reaches middle of the screen
                         toggleActions: "play none none none",
+                        markers:true,
                     },
                 }
             );
