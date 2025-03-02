@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import Nav from "../Nav";
 import { FaArrowDown } from "react-icons/fa";
-import agri from "../assets/Est. 2012.png";
+import agri from "/Est. 2012.png";
 
 const MyComponent: React.FC = () => {
   const containerRef = useRef(null);
@@ -53,7 +53,7 @@ const MyComponent: React.FC = () => {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen text-white px-16 py-6 relative"
+      className="min-h-screen w-full text-white px-16 py-6 relative"
       style={{
         backgroundImage: `url(${agri})`,
         backgroundSize: "cover",
@@ -76,7 +76,7 @@ const MyComponent: React.FC = () => {
       </div>
 
       <div className="h-[50vh] flex justify-center items-center relative z-10">
-        <h1 className="text-[15rem] leading-none">KISAN MEL</h1>
+        <h1 className="text-[15rem] leading-none">Kisanमेल</h1>
       </div>
 
       <div className="h-[22vh] flex flex-col relative z-10">

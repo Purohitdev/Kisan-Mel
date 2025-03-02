@@ -1,11 +1,11 @@
 import React from 'react';
 import { FaPlay } from 'react-icons/fa';
-import agri from "../assets/Est. 2012.png"
+import agri from "/Est. 2012.png"
 
 
 const Video: React.FC = () => {
   return (
-    <div className="h-[60vh] bg-black text-white px-16 py-6 flex justify-center items-center"
+    <div className="h-[60vh] w-full bg-black text-white px-16 py-6 flex justify-center items-center"
     style={{
       backgroundImage: `url(${agri})`,
       backgroundSize: 'cover',
