@@ -46,7 +46,7 @@ const App_promo: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-[#2d4122]  text-white px-8 md:px-16 py-12 min-h-fit  mx-auto rounded-2xl">
+    <div className="bg-[#000]  text-white px-8 md:px-16 py-12 min-h-fit  mx-auto rounded-2xl">
       {/* Top Section */}
       <div className="flex flex-wrap md:flex-nowrap items-center gap-y-10 md:gap-16">
         {/* Mobile App Preview */}
@@ -81,26 +81,24 @@ const App_promo: React.FC = () => {
             KisanMel Mobile Platform provides:
           </h2>
           <div className="flex gap-5 mt-2">
-            <div className="w-full md:w-1/2 bg-[#D9D7CD] p-5 rounded-2xl">
+            <div className="w-fit  bg-[#D9D7CD] p-5 rounded-2xl px-8 py-4">
               <ul className="list-disc list-inside text-[#2d4122] mt-3">
-                <li>Crop selection suggestions based on location</li>
+                <li>Crop selection suggestions </li>
                 <li>Farm management solutions</li>
                 <li>Expert farm advisories</li>
-                <li>Partnership model for big farmers</li>
+                <li>Partnership model for big </li>
                 <li>Market connect</li>
-                <li>Financial support & Govt. schemes</li>
-                <li>Revenue forecast and agricultural insights</li>
+        
               </ul>
             </div>
-            <div className="w-full md:w-1/2 bg-[#D9D7CD] p-5 rounded-2xl">
+            <div className="w-fit  bg-[#D9D7CD] p-5 rounded-2xl px-8 py-4">
               <ul className="list-disc list-inside text-[#2d4122] mt-3">
-                <li>Weather-based crop recommendations</li>
-                <li>Real-time market price updates</li>
-                <li>Automated farm activity tracking</li>
-                <li>Personalized farming insights</li>
-                <li>Online expert consultations</li>
-                <li>IoT-based farm monitoring</li>
-                <li>Data-driven decision making</li>
+                <li>Weather-based crop </li>
+                <li>Real-time market price </li>
+                <li>Automated farm activity </li>
+                <li>Personalized farming </li>
+                <li>Online expert </li>
+              
               </ul>
             </div>
           </div>
@@ -122,7 +120,7 @@ const App_promo: React.FC = () => {
 
           <div className="flex gap-5 mt-6">
             {/* Drip Line Irrigation Automation */}
-            <div className="w-full md:w-1/2">
+            <div className="w-fit  py-4  ">
               <h3 className="text-xl font-bold mb-3 text-yellow-300">Drip Line Irrigation Automation</h3>
               <div className="bg-[#D9D7CD] text-[#2d4122] p-5 rounded-2xl">
                 <ul className="list-disc list-inside mt-3 space-y-1">
@@ -130,20 +128,19 @@ const App_promo: React.FC = () => {
                   <li>Automatic Fertilizer supply</li>
                   <li>Nutricent management of farm</li>
                   <li>Remote water level monitoring</li>
-                  <li>Smart irrigation scheduling</li>
                 </ul>
               </div>
             </div>
 
             {/* Farm Security Management */}
-            <div className="w-full md:w-1/2">
+            <div className="w-fit py-4  ">
               <h3 className="text-xl font-bold mb-3 text-yellow-300">Farm Security Management</h3>
               <div className="bg-[#D9D7CD] text-[#2d4122] p-5 rounded-2xl">
                 <ul className="list-disc list-inside mt-3 space-y-1">
-                  <li>Monitor your farm from anywhere</li>
-                  <li>Daily live monitoring with KisanMel-Eye</li>
-                  <li>Animal protection with electric shock machine</li>
-                  <li>Alarm and night light if motion detected</li>
+                  <li>Monitor your farm from </li>
+                  <li>Daily live monitoring with </li>
+                  <li>Animal protection with </li>
+                  <li>Alarm and night light if motion </li>
                 </ul>
               </div>
             </div>

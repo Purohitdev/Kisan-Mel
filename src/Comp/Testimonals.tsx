@@ -33,8 +33,12 @@ const Testimonials: React.FC = () => {
   return (
     <div className="min-h-auto px-16 py-8 bg-[#e4e1d8b2]">
       <div className="mb-8 flex items-center">
-        <h1 className="text-5xl font-bold leading-tight capitalize text-[#2d4122]">
+        {/* <h1 className="text-5xl font-bold leading-tight capitalize text-[#2d4122]">
           Hear it from others, not just us
+        </h1> */}
+
+        <h1 className="text-[2.5rem] leading-none font-bold text-[#2d4122] capitalize">
+        Hear it from others, not just us
         </h1>
       </div>
 
@@ -47,11 +51,11 @@ const Testimonials: React.FC = () => {
         </Marquee>
 
         {/* Right to Left Marquee */}
-        <Marquee className="min-h-[25vh]" direction="right" speed={50} autoFill={true} pauseOnHover={true}>
+        {/* <Marquee className="min-h-[25vh]" direction="right" speed={50} autoFill={true} pauseOnHover={true}>
           {testimonials.map((testimonial, index) => (
             <TestimonialCard key={`right-${index}`} {...testimonial} />
           ))}
-        </Marquee>
+        </Marquee> */}
       </div>
     </div>
   );

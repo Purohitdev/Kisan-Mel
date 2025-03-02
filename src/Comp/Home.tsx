@@ -16,8 +16,8 @@ function Home() {
    <Work/>
    <Video/>
    <Partnership/>
-   <Testimonals/>
    <Stories/>
+   <Testimonals/>
    <Service/>
    <App_promo/>
    <Achivemnet/>

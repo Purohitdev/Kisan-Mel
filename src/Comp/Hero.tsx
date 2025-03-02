@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import Nav from "../Nav";
 import { FaArrowDown } from "react-icons/fa";
-import agri from "/Est. 2012.png";
+import agri from "/hero.jpg";
 
 const MyComponent: React.FC = () => {
   const containerRef = useRef(null);
@@ -61,7 +61,7 @@ const MyComponent: React.FC = () => {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-opacity-20"></div>
+      <div className="absolute inset-0 bg-opacity-10 bg-[#000000a7]"></div>
 
       {/* Navbar */}
       <div ref={navRef} className="relative z-10">
@@ -69,23 +69,24 @@ const MyComponent: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="h-[15vh] flex justify-end items-end relative z-10">
+      <div className="h-[10vh] flex justify-end items-end relative z-10">
         <p ref={loremRef} className="w-1/3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolor ut eum, veniam quasi a porro quibusdam sit, officia ratione commodi voluptatem iure alias fuga, eveniet eligendi ab quae harum!
+          {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolor ut eum, veniam quasi a porro quibusdam sit, officia ratione commodi voluptatem iure alias fuga, eveniet eligendi ab quae harum! */}
         </p>
       </div>
 
-      <div className="h-[50vh] flex justify-center items-center relative z-10">
-        <h1 className="text-[15rem] leading-none">Kisanमेल</h1>
+      <div className="h-[50vh] flex justify-center items-center relative z-10 bg-cover">
+        {/* <h1 className="text-[15rem] leading-none">Kisan-मेल</h1> */}
+        <img src="/logo2.svg" alt="" />
       </div>
 
-      <div className="h-[22vh] flex flex-col relative z-10">
+      <div className="h-[28vh] flex flex-col relative z-10">
         <div ref={rootsRef} className="border-b-2 border-white h-[50%] flex items-center">
-          <h2 className="text-[1.5rem]">// Roots in organic</h2>
+          {/* <h2 className="text-[1.5rem] italic"> sahi ugao !! sahi kamao !!</h2> */}
         </div>
         <div className="h-[50%] flex flex-col items-center pt-4 capitalize justify-center gap-2">
-          <p ref={slideInfoRef}>slide down for more information</p>
-          <button ref={buttonRef} className="bg-white px-4 py-6 rounded-3xl text-black">
+          <p ref={slideInfoRef}>lets grow toghther</p>
+          <button ref={buttonRef} className="bg-white px-3 py-5 rounded-3xl text-black text-xs">
             <FaArrowDown />
           </button>
         </div>
