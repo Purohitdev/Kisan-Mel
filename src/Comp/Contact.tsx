@@ -32,7 +32,7 @@ function Contact() {
           <input type="text" placeholder="Phone Number" className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#2d4122]" />
           <input type="email" placeholder="Your Email" className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#2d4122]" />
           <textarea placeholder="Your Message"  className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#2d4122]"></textarea>
-          <button className="w-1/3 bg-[#2d4122] text-[#EDEAE4] py-3 rounded-md font-semibold hover:bg-[#EDEAE4] hover:text-[#2d4122] hover:border border-[#2d4122] transition">SEND MESSAGE</button>
+          <button className="w-fit px-4 bg-[#2d4122] text-[#EDEAE4] py-3 rounded-md font-semibold hover:bg-[#EDEAE4] hover:text-[#2d4122] hover:border border-[#2d4122] transition">SEND MESSAGE</button>
         </form>
       </div>
     </div>

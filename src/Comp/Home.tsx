@@ -8,6 +8,9 @@ import Service from './Service'
 import App_promo from './App_promo'
 import Achivemnet from './Achivemnet'
 import Contact from './Contact'
+import Clints from './Clints'
+import Banner from './Banner'
+import Footer from '../Footer'
 
 function Home() {
   return (
@@ -22,6 +25,9 @@ function Home() {
    <App_promo/>
    <Achivemnet/>
    <Contact/>
+   <Clints/>
+   <Banner/>
+   <Footer/>
 
    </div>
   )

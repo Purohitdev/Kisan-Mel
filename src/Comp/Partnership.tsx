@@ -97,54 +97,62 @@ function Partnership() {
   }, [currentIndex]);
 
   return (
-    <div ref={sectionRef} className="min-h-screen w-full bg-[#e4e1d8b2] px-16 py-6">
-      <div className="min-h-[90vh] w-full h-full flex justify-center items-center p-5">
+    <div ref={sectionRef} className="min-h-screen w-full bg-[#e4e1d8b2] px-6 sm:px-16 py-6">
+      <div className="block md:hidden mb-4">
+        <button className="px-4 py-2 border border-[#2d4122] rounded-3xl text-[#2d4122]">
+          Our Partnership
+        </button>
+      </div>
+      <div className="min-h-[90vh] w-full flex flex-col-reverse md:flex-row justify-center items-center p-5">
         {/* Left Section */}
-        <div className="w-full text-[#2d4122]">
-          <button className="px-4 py-2 border border-[#2d4122] rounded-3xl flex justify-center items-center w-fit text-[#2d4122]">
-            Our Partnership
-          </button>
-          <h1 className="text-[4rem] leading-none mt-5 font-bold">Big Farmer Farm-Partnership Model</h1>
+        <div className="w-full text-[#2d4122]  md:text-left">
+          <div className="hidden md:block mb-4">
+            <button className="px-4 py-2 border border-[#2d4122] rounded-3xl text-[#2d4122]">
+              Our Partnership
+            </button>
+          </div>
+          <h1 className="text-3xl sm:text-[4rem] leading-none font-bold">Big Farmer Farm-Partnership Model</h1>
 
           {/* Dynamic Title */}
-          <h3 ref={titleRef} className="text-[1.5rem] mt-5">{partnerships[currentIndex].title}</h3>
+          <h3 ref={titleRef} className="text-lg sm:text-[1.5rem] mt-5">{partnerships[currentIndex].title}</h3>
 
           {/* Dynamic Table */}
-          <table ref={tableRef} className="w-[80%] border border-[#2d4122] text-[#2d4122] text-lg mt-10">
-            <thead>
-              <tr className="bg-[#2d4122] text-white">
-                <th className="border border-[#2d4122] p-3"></th>
-                <th className="border border-[#2d4122] p-3">KisanMel</th>
-                <th className="border border-[#2d4122] p-3">Farmer</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="border border-[#2d4122] p-3 font-semibold">Investment</td>
-                <td className="border border-[#2d4122] p-3 text-center">{partnerships[currentIndex].investment[0]}</td>
-                <td className="border border-[#2d4122] p-3 text-center">{partnerships[currentIndex].investment[1]}</td>
-              </tr>
-              <tr>
-                <td className="border border-[#2d4122] p-3 font-semibold">Management</td>
-                <td className="border border-[#2d4122] p-3 text-center">{partnerships[currentIndex].management[0]}</td>
-                <td className="border border-[#2d4122] p-3 text-center">{partnerships[currentIndex].management[1]}</td>
-              </tr>
-              <tr>
-                <td className="border border-[#2d4122] p-3 font-semibold">Returns</td>
-                <td className="border border-[#2d4122] p-3 text-center">{partnerships[currentIndex].returns[0]}</td>
-                <td className="border border-[#2d4122] p-3 text-center">{partnerships[currentIndex].returns[1]}</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <button className="mt-10 px-6 py-4 border-b-2 border-[#2d4122] text-[#2d4122]">
-            View {partnerships[currentIndex].title}
+          <div className="overflow-x-auto">
+            <table ref={tableRef} className="w-full sm:w-[80%] border border-[#2d4122] text-[#2d4122] text-sm sm:text-lg md:mt-10 sm:mt-5">
+              <thead>
+                <tr className="bg-[#2d4122] text-white">
+                  <th className="border border-[#2d4122] p-3"></th>
+                  <th className="border border-[#2d4122] p-3">KisanMel</th>
+                  <th className="border border-[#2d4122] p-3">Farmer</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-[#2d4122] p-3 font-semibold">Investment</td>
+                  <td className="border border-[#2d4122] p-3 text-center">{partnerships[currentIndex].investment[0]}</td>
+                  <td className="border border-[#2d4122] p-3 text-center">{partnerships[currentIndex].investment[1]}</td>
+                </tr>
+                <tr>
+                  <td className="border border-[#2d4122] p-3 font-semibold">Management</td>
+                  <td className="border border-[#2d4122] p-3 text-center">{partnerships[currentIndex].management[0]}</td>
+                  <td className="border border-[#2d4122] p-3 text-center">{partnerships[currentIndex].management[1]}</td>
+                </tr>
+                <tr>
+                  <td className="border border-[#2d4122] p-3 font-semibold">Returns</td>
+                  <td className="border border-[#2d4122] p-3 text-center">{partnerships[currentIndex].returns[0]}</td>
+                  <td className="border border-[#2d4122] p-3 text-center">{partnerships[currentIndex].returns[1]}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button className="md:mt-10 px-6 py-4 border-b-2 border-[#2d4122] text-[#2d4122] w-fit">
+          View {partnerships[currentIndex].title}
           </button>
         </div>
 
         {/* Right Section with Changing Image */}
-        <div className="w-full flex justify-end items-center">
-          <div className="w-[80%] h-[70vh] rounded-3xl overflow-hidden">
+        <div className="w-full flex justify-center items-center mb-5 md:mb-0  md:justify-end">
+        <div className="w-full sm:w-[80%] h-60 sm:h-[70vh] rounded-3xl overflow-hidden">
             <img
               ref={imageRef}
               src={partnerships[currentIndex].image}

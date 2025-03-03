@@ -8,21 +8,20 @@ function Service() {
   const services = [
     {
       title: "Free training & visits",
-      description:" We provide training and free visit programs on a fixed date every month.",
+      description: "We provide training and free visit programs on a fixed date every month.",
     },
     {
-      title: "Advanced  Techniques",
-      description:"I We provide training and free visit programs on a fixed date every month.",
+      title: "Advanced Techniques",
+      description: "We provide training and free visit programs on a fixed date every month.",
     },
     {
-      title: "Organic  Support",
-      description:" We provide training and free visit programs on a fixed date every month.",
+      title: "Organic Support",
+      description: "We provide training and free visit programs on a fixed date every month.",
     },
   ];
 
-  const serviceRef = useRef<HTMLDivElement | null>(null);
-  const imageRef = useRef<HTMLImageElement | null>(null);
-  const boxRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const serviceRef = useRef(null);
+  const imageRef = useRef(null);
 
   useEffect(() => {
     if (!imageRef.current) return;
@@ -39,51 +38,26 @@ function Service() {
     });
   }, []);
 
-  useEffect(() => {
-    if (!boxRefs.current.length) return;
-
-    boxRefs.current.forEach((box) => {
-      if (!box) return;
-      gsap.to(box, {
-        yPercent: -50,
-        ease: "none",
-        scrollTrigger: {
-          trigger: box,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true,
-        },
-      });
-    });
-  }, []);
-
   return (
-    <div className="min-h-[100vh] w-full bg-[#e4e1d8b2] text-[#2d4122] px-16 py-10 pb-32 " ref={serviceRef} >
-     {/* <div className=" px-5 mb-[-20px] border">
-     <button className="px-6 py-3 border border-[#2d4122] rounded-full flex justify-center items-center w-fit text-[#2d4122] font-semibold shadow-md hover:bg-[#2d4122] hover:text-white transition-all">
-        Our Service
-      </button>
-     </div> */}
-
-      <h1 className="text-[2.5rem] font-extrabold mt-5 text-center ">
+    <div className="min-h-fit w-full bg-[#e4e1d8b2] text-[#2d4122] px-5 md:px-16 py-10 pb-32" ref={serviceRef}>
+      <h1 className="text-[2rem] md:text-[2.5rem] font-extrabold mt-5 text-center">
         Services Kisanमेल Farm model offers
       </h1>
-      <p className="text-[1rem] mt-3 text-center max-w-3xl mx-auto ">
+      <p className="text-[1rem] mt-3 text-center max-w-3xl mx-auto">
         Inspiring farmers to upgrade their farm land based on our model. We provide training and free visit programs on a fixed date every month.
       </p>
 
-      <div className="w-full h-auto mt-10 flex gap-8 items-center ">
+      <div className="w-full h-auto mt-10 flex flex-wrap md:flex-nowrap gap-8 items-center justify-center">
         {/* Left Column */}
-        <div className="w-full p-5 flex flex-col gap-8">
+        <div className="w-full md:w-1/3 p-5 flex flex-col gap-8 justify-center">
           {services.map((service, index) => (
             <div
               key={index}
-              ref={(el) => {
-                if (el) boxRefs.current[index] = el;
-              }}
-              className="service-box text-[#2d4122] border  flex items-center gap-6 px-2  py-3 rounded-lg shadow-lg hover:shadow-xl transition-shadow  h-fit"
+              className={`service-box text-[#2d4122] w-full md:w-[90%] flex items-center gap-6 px-2 py-3 h-fit ${
+                index % 2 === 1 ? "md:ml-auto" : ""
+              }`}
             >
-              <div className="border rounded-full h-[60px] w-[60px] bg-[#e4e1d8] flex items-center justify-center text-lg font-bold text-[#2d4122]">
+              <div className="border rounded-full h-[50px] w-[50px] md:h-[60px] md:w-[60px] bg-[#e4e1d8] flex items-center justify-center text-lg font-bold text-[#2d4122]">
                 {index + 1}
               </div>
               <div className="w-[70%]">
@@ -95,26 +69,25 @@ function Service() {
         </div>
 
         {/* Center Image with Parallax Effect */}
-        <div className="w-full flex justify-center items-center mt-[50px]">
+        <div className="w-full md:w-1/3 flex justify-center items-center order-first md:order-none">
           <img
             ref={imageRef}
             src="/farm2.jpg"
             alt="Farm Services"
-            className="w-[80%] h-[40%]  object-cover rounded-xl shadow-lg border border-gray-300 mt-[-50px]"
+            className="w-[90%] max-w-[300px] md:max-w-none object-cover rounded-xl shadow-lg border border-gray-300 mt-[-30px] md:mt-[-50px]"
           />
         </div>
 
         {/* Right Column */}
-        <div className="w-full   p-5 flex flex-col gap-8 ">
+        <div className="w-full md:w-1/3 p-5 flex flex-col gap-8 justify-center">
           {services.map((service, index) => (
             <div
               key={index}
-              ref={(el) => {
-                if (el) boxRefs.current[index] = el;
-              }}
-              className="service-box text-[#2d4122] border  flex items-center gap-6 px-2  py-3 rounded-lg shadow-lg hover:shadow-xl transition-shadow  h-fit"
+              className={`service-box text-[#2d4122] w-full md:w-[90%] flex items-center gap-6 px-2 py-3 h-fit ${
+                index % 2 === 0 ? "md:ml-auto" : ""
+              }`}
             >
-              <div className="border rounded-full h-[60px] w-[60px] bg-[#e4e1d8] flex items-center justify-center text-lg font-bold text-[#2d4122]">
+              <div className="border rounded-full h-[50px] w-[50px] md:h-[60px] md:w-[60px] bg-[#e4e1d8] flex items-center justify-center text-lg font-bold text-[#2d4122]">
                 {index + 1}
               </div>
               <div className="w-[70%]">
