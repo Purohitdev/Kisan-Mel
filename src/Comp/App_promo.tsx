@@ -59,8 +59,8 @@ const App_promo: React.FC = () => {
         </div>
 
         {/* App Features */}
-        <div ref={(el) => el && (whiteBoxRefs.current[0] = el)} className="w-full md:w-2/3">
-          <button className="px-4 py-2 border rounded-3xl w-fit">Our Technology</button>
+        <div ref={(el) => { if (el) whiteBoxRefs.current[0] = el; }} className="w-full md:w-2/3">
+        <button className="px-4 py-2 border rounded-3xl w-fit">Our Technology</button>
           <h1 className="text-2xl md:text-5xl font-bold max-w-lg mt-4">Download the app now</h1>
           <ul className="text-gray-300 max-w-lg text-lg md:text-xl mt-5 leading-normal">
             <li>Crop Selection</li>
@@ -97,8 +97,8 @@ const App_promo: React.FC = () => {
       {/* IoT Solution Section */}
       <div className="mt-16 flex flex-wrap md:flex-nowrap items-center gap-y-4 md:gap-10">
         {/* IoT Features */}
-        <div ref={(el) => el && (iotWhiteBoxRef.current = el)} className="w-full md:w-2/3">
-          <button className="px-4 py-2 rounded-3xl w-fit border">Automate Your Farm</button>
+        <div ref={(el) => { iotWhiteBoxRef.current = el; }} className="w-full md:w-2/3">
+        <button className="px-4 py-2 rounded-3xl w-fit border">Automate Your Farm</button>
           <h2 className="text-2xl md:text-3xl font-bold mt-4">Our IoT Solution</h2>
           <div className="flex flex-wrap gap-5 mt-6">
             {/* Drip Line Irrigation Automation */}

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { FaPlay } from 'react-icons/fa';
-import agri from "/Est. 2012.png";
 
 const Video: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
