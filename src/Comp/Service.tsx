@@ -40,7 +40,7 @@ function Service() {
 
   return (
     <div className="min-h-fit w-full bg-[#e4e1d8b2] text-[#2d4122] px-5 md:px-16 py-10 pb-32" ref={serviceRef}>
-      <h1 className="text-[2rem] md:text-[2.5rem] font-extrabold mt-5 text-center">
+      <h1 className="text-[2rem] md:text-[2.5rem] font-extrabold mt-5 text-center leading-none">
         Services Kisanमेल Farm model offers
       </h1>
       <p className="text-[1rem] mt-3 text-center max-w-3xl mx-auto">
@@ -49,8 +49,8 @@ function Service() {
 
       <div className="w-full h-auto mt-10 flex flex-wrap md:flex-nowrap gap-8 items-center justify-center">
         {/* Left Column */}
-        <div className="w-full md:w-1/3 p-5 flex flex-col gap-8 justify-center">
-          {services.map((service, index) => (
+        <div className="w-full md:w-1/3 p-5 flex flex-col gap-8 justify-center mt-[60px] md:mt-[0px]">
+        {services.map((service, index) => (
             <div
               key={index}
               className={`service-box text-[#2d4122] w-full md:w-[90%] flex items-center gap-6 px-2 py-3 h-fit ${

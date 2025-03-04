@@ -71,21 +71,21 @@ const Work: React.FC = () => {
       <div className="h-auto md:h-[30vh] px-6 py-4 flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
         <div className="flex flex-col gap-2">
           {/* <button className="px-4 py-2 border rounded-3xl w-fit text-sm md:text-base">Our Work</button> */}
-          <h1 className="text-2xl md:text-[3.5rem] leading-none font-bold">
+          <h1 className="text-[2.5rem] md:text-[3.5rem] leading-none font-bold">
             How We Are Helping Farmers
           </h1>
         </div>
-        <p className="text-sm md:text-base md:w-[30%]">
+        <p className="text-lg md:text-base md:w-[30%]">
           We are revolutionizing agriculture with technology, sustainable methods, and direct market access, ensuring farmers get the best resources and profits.
         </p>
       </div>
 
       {/* Scrollable Boxes */}
-      <div ref={boxesRef} className="h-auto md:h-[50vh] flex items-center gap-4 md:gap-8 relative w-max mt-[30px] overflow-x-auto">
+      <div ref={boxesRef} className="md:h-[50vh] flex items-center gap-4 md:gap-8 relative w-max mt-[30px] overflow-x-auto">
         {workBoxes.map((box, index) => (
           <div 
             key={index} 
-            className="border bg-cover bg-center h-[40vh] md:h-full w-[80vw] md:w-[50vh] rounded-3xl flex flex-col justify-between p-4 md:p-6 text-[#DAD7CD]" 
+            className="border bg-cover bg-center h-[50vh] md:h-full w-[80vw] md:w-[50vh] rounded-3xl flex flex-col justify-between p-4 md:p-6 text-[#DAD7CD] " 
             style={{ backgroundImage: `url(${box.img})` }}
           >
             <h2 className="text-lg md:text-xl font-bold w-fit px-3 py-2 backdrop-blur-xl border border-white/20 shadow-lg text-[#2d4122]">
