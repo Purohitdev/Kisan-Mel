@@ -7,17 +7,30 @@ gsap.registerPlugin(ScrollTrigger);
 function Service() {
   const services = [
     {
-      title: "Free training & visits",
-      description: "We provide training and free visit programs on a fixed date every month.",
+      "title": "Farm Research",
+      "description": "We analyze your farm’s soil and climate to suggest crops that bring maximum growth and profit."
     },
     {
-      title: "Advanced Techniques",
-      description: "We provide training and free visit programs on a fixed date every month.",
+      "title": "Smart Crop Planning",
+      "description": "Based on farm conditions and market demand, we guide you to grow the most profitable and suitable crops."
     },
     {
-      title: "Organic Support",
-      description: "We provide training and free visit programs on a fixed date every month.",
+      "title": "Agri Showrooms",
+      "description": "Get seeds, tools, fertilizers, and more at one place — our agri-showrooms cater to all your farming needs."
     },
+    {
+      "title": "Full Support",
+      "description": "From testing soil to post-harvest advice, we support you at every step of your farming journey."
+    },
+    {
+      "title": "Profit Ecosystem",
+      "description": "Our model boosts profits by combining smart crop choices with easy access to essential farming resources."
+    },
+    {
+      "title": "Farmer Empowerment",
+      "description": "We modernize traditional farming by equipping farmers with expert guidance, quality tools, and market-oriented strategies."
+    }
+  
   ];
 
   const serviceRef = useRef(null);
@@ -50,7 +63,7 @@ function Service() {
       <div className="w-full h-auto mt-10 flex flex-wrap md:flex-nowrap gap-8 items-center justify-center">
         {/* Left Column */}
         <div className="w-full md:w-1/3 p-5 flex flex-col gap-8 justify-center mt-[60px] md:mt-[0px]">
-        {services.map((service, index) => (
+          {services.slice(0, 3).map((service, index) => (
             <div
               key={index}
               className={`service-box text-[#2d4122] w-full md:w-[90%] flex items-center gap-6 px-2 py-3 h-fit ${
@@ -80,15 +93,15 @@ function Service() {
 
         {/* Right Column */}
         <div className="w-full md:w-1/3 p-5 flex flex-col gap-8 justify-center">
-          {services.map((service, index) => (
+          {services.slice(3, 6).map((service, index) => (
             <div
-              key={index}
+              key={index + 3}
               className={`service-box text-[#2d4122] w-full md:w-[90%] flex items-center gap-6 px-2 py-3 h-fit ${
                 index % 2 === 0 ? "md:ml-auto" : ""
               }`}
             >
               <div className="border rounded-full h-[50px] w-[50px] md:h-[60px] md:w-[60px] bg-[#e4e1d8] flex items-center justify-center text-lg font-bold text-[#2d4122]">
-                {index + 1}
+                {index + 4}
               </div>
               <div className="w-[70%]">
                 <h2 className="text-[1rem] leading-snug font-semibold">{service.title}</h2>

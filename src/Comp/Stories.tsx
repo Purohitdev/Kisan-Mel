@@ -3,28 +3,44 @@ import gsap from "gsap";
 
 const storiesData = [
   {
-    name: "Ramkrishan Sharma",
-    model: "Farmer #Model 1",
-    land: "Farm land - 3 arc",
-    location: "Village - Mundiagardh, Jaipur, Rajasthan",
-    description: "Lorem ipsum dolor sit amet consectetur. Tortor tempus cursus leo dictumst elementum. Sagittis elit turpis dignissim turpis tristique venenatis...",
-    image: "/Est. 2012.png"
+    "name": "Sita Ram Verma",
+    "model": "Fast Crop Model",
+    "land": "4 acres",
+    "location": "Hardoi, Uttar Pradesh",
+    "description": "Sita Ram started growing okra and leafy vegetables using drip irrigation. He earned profit in just 50 days and inspired 8 nearby farmers to try the same model.",
+    "image": "https://i.pinimg.com/736x/ab/d3/9c/abd39c905de130d458b568d5dce93dd5.jpg"
   },
   {
-    name: "Suresh Kumar",
-    model: "Farmer #Model 2",
-    land: "Farm land - 5 arc",
-    location: "Village - Udaipur, Rajasthan",
-    description: "Lorem ipsum dolor sit amet consectetur. Nulla facilisi. Ut tristique mauris nec sagittis luctus...",
-    image: "/farm2.jpg"
+    "name": "Kamla Bai",
+    "model": "Medium-Term Crop Model",
+    "land": "6 acres",
+    "location": "Betul, Madhya Pradesh",
+    "description": "Kamla Bai used our model to grow turmeric with proper fertigation. Her crop gave good returns, and she reinvested to expand to 2 more acres next season.",
+    "image": "https://i.pinimg.com/736x/6e/c0/4d/6ec04d15cc074ce65d2e89ba27b54b74.jpg"
   },
   {
-    name: "Anita Devi",
-    model: "Farmer #Model 3",
-    land: "Farm land - 4 arc",
-    location: "Village - Jodhpur, Rajasthan",
-    description: "Lorem ipsum dolor sit amet consectetur. Aenean tincidunt eros sed velit malesuada, non ultrices ligula pretium...",
-    image: "/farm3.jpg"
+    "name": "Jagdish Meena",
+    "model": "Custom Farm Model",
+    "land": "12 acres",
+    "location": "Tonk, Rajasthan",
+    "description": "Jagdish used a mix of papaya and seasonal vegetables with IoT monitoring. His income grew steadily, and he now employs 5 workers from his village.",
+    "image": "https://i.pinimg.com/736x/2b/90/b7/2b90b75c737128ef4748d41d627c402f.jpg"
+  },
+  {
+    "name": "Nirmala Devi",
+    "model": "Fast Crop Model",
+    "land": "3 acres",
+    "location": "Nalanda, Bihar",
+    "description": "Nirmala grew early cauliflower and spinach. Using training from Kisan Mal, she sold produce directly to market and earned twice her previous income.",
+    "image": "https://i.pinimg.com/736x/e6/da/97/e6da9788523374e9907ef9705516947d.jpg"
+  },
+  {
+    "name": "Baldev Singh",
+    "model": "Medium-Term Crop Model",
+    "land": "7 acres",
+    "location": "Barnala, Punjab",
+    "description": "Baldev planted ginger using our model and software. He saved water with drip and got a bulk buyer from Delhi, making his season a big success.",
+    "image": "https://i.pinimg.com/736x/77/bc/4b/77bc4b6f2c255d037357ddca2b0d9f2d.jpg"
   }
 ];
 

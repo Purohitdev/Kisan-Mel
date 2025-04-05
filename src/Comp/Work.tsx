@@ -76,8 +76,7 @@ const Work: React.FC = () => {
           </h1>
         </div>
         <p className="text-lg md:text-base md:w-[30%]">
-          We are revolutionizing agriculture with technology, sustainable methods, and direct market access, ensuring farmers get the best resources and profits.
-        </p>
+        At KisanMel, we analyze your farm and climate to guide profitable crop choices and provide all essentials through our dedicated agri-showrooms.        </p>
       </div>
 
       {/* Scrollable Boxes */}

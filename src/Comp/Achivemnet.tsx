@@ -81,7 +81,7 @@ function Achievement() {
                             </div>
                             <div>
                                 <h4 ref={addToRefs} className="text-lg font-semibold">Introduced IoT devices into farming</h4>
-                                <p ref={addToRefs} className="text-sm">Lorem ipsum dolor sit amet consectetur. Cursus purus at tempus arcu.</p>
+                                <p ref={addToRefs} className="text-sm">We introduced IoT devices that help farmers monitor soil and weather, improving farm management and productivity.</p>
                             </div>
                         </div>
                         <hr />
@@ -91,7 +91,7 @@ function Achievement() {
                             </div>
                             <div>
                                 <h4 ref={addToRefs} className="text-lg font-semibold">Substantially increased farmers' profits</h4>
-                                <p ref={addToRefs} className="text-sm">Lorem ipsum dolor sit amet consectetur. Cursus purus at tempus arcu.</p>
+                                <p ref={addToRefs} className="text-sm">With smart planning and technology, we helped farmers earn more and improve their crop profits</p>
                             </div>
                         </div>
                     </div>

@@ -24,10 +24,30 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ name, message }) => (
 // Testimonial section
 const Testimonials: React.FC = () => {
   const testimonials = [
-    { name: "John Doe", message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum." },
-    { name: "Jane Smith", message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum." },
-    { name: "Alice Johnson", message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum." },
-    { name: "Bob Brown", message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum." },
+    {
+      "name": "AgroPro Solutions",
+      "message": "Kisan Mel’s model is a game-changer. Our collaboration improved farmer reach, and the training impact is clearly visible on ground."
+    },
+    {
+      "name": "GreenGrow Fertilizers",
+      "message": "Partnering with Kisan Mel allowed us to introduce eco-friendly inputs to rural markets. Their farmer trust and outreach made product adoption smooth and successful."
+    },
+    {
+      "name": "SmartFarm Tech",
+      "message": "Kisan Mel's use of IoT and AI made it easy to deploy our tools. Real-time results proved how technology boosts farmer productivity."
+    },
+    {
+      "name": "Bharat Seeds Co.",
+      "message": "Through Kisan Mel's agri-showrooms, our quality seeds reached thousands of farmers. Their model builds both trust and repeat purchases—truly effective grassroots distribution!"
+    },
+    {
+      "name": "KhetCare Insurance",
+      "message": "Kisan Mel helped us explain crop insurance in simple terms. Farmers are now more aware and protected, thanks to their regular village engagement programs."
+    },
+    {
+      "name": "AgriTrade India",
+      "message": "We found excellent sourcing partners through Kisan Mel. Their farmer network and market alignment ensured a steady supply of quality produce for our export channels."
+    }
   ];
 
   return (

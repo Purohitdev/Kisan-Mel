@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import farm1 from "/farm2.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,21 +10,21 @@ const partnerships = [
     investment: ["0%", "100%"],
     management: ["100%", "0%"],
     returns: ["25%", "75%"],
-    image: farm1,
+    image: "https://i.pinimg.com/736x/a1/cd/ed/a1cded971e3f7e2416bef74a07a501f2.jpg",
   },
   {
     title: "40% - 60% KisanMel Partnership",
     investment: ["10%", "90%"],
     management: ["80%", "20%"],
     returns: ["40%", "60%"],
-    image: farm1,
+    image: "https://i.pinimg.com/736x/05/ae/15/05ae154c9e5444b530a8c480796242e5.jpg",
   },
   {
     title: "50% - 50% KisanMel Partnership",
     investment: ["50%", "50%"],
     management: ["50%", "50%"],
     returns: ["50%", "50%"],
-    image: farm1,
+    image: "https://i.pinimg.com/736x/54/88/fd/5488fd7f44773e347e716771c577530d.jpg",
   },
 ];
 

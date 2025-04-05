@@ -8,7 +8,7 @@ function Contact() {
                         Our Contact
                     </button>          <h2 className="text-3xl font-bold my-2">Send a message</h2>
           <p className="text-sm text-gray-600 mb-4">
-            Lorem ipsum dolor sit amet, adipiscing elit. In hac habitasse platea dictumst.
+          Have questions or need farm support? Send us a message — we're here to help!
           </p>
           <div className="space-y-3">
             <div>
