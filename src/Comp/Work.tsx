@@ -14,17 +14,17 @@ const workBoxes: WorkBox[] = [
   { 
     header: "Box 1", 
     content: "Helping farmers with modern irrigation techniques.", 
-    img: "https://i.pinimg.com/736x/54/05/6f/54056f7e04d19b9549b163b78f2863fe.jpg" 
+    img: "https://i.pinimg.com/736x/cb/da/eb/cbdaeb71524d8dad7e926fc57034320b.jpg" 
   },
   { 
     header: "Box 2", 
     content: "Providing quality seeds and fertilizers for better yield.", 
-    img: "https://i.pinimg.com/736x/4c/96/39/4c96393a0238d3b000df0793173af35b.jpg" 
+    img: "https://i.pinimg.com/736x/75/59/ac/7559ac2852b96e1a74a356bf9feb069d.jpg" 
   },
   { 
     header: "Box 3", 
     content: "Connecting farmers with buyers directly to maximize profits.", 
-    img: "https://i.pinimg.com/736x/f2/ed/5e/f2ed5e8d7ca9515e0f9a21adfec40a2d.jpg" 
+    img: "https://i.pinimg.com/736x/43/f0/6d/43f06d948811882d2650bbebd59c6395.jpg" 
   },
   { 
     header: "Box 4", 
@@ -95,9 +95,21 @@ const Work: React.FC = () => {
             </p>
           </div>
         ))}
-      </div>
+      </div>  
     </div>
   );
 };
 
 export default Work;
+
+
+
+// import React from 'react'
+
+// function Work() {
+//   return (
+//     <div className="min-h-[100vh] bg-[#2d4122] text-[#DAD7CD] px-4 md:px-16 py-6 relative overflow-hidden">Work</div>
+//   )
+// }
+
+// export default Work

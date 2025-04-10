@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,6 +35,8 @@ function Partnership() {
   const tableRef = useRef(null);
   const imageRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const navigate = useNavigate(); // ✅ useNavigate must be inside the component
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -97,27 +100,37 @@ function Partnership() {
 
   return (
     <div ref={sectionRef} className="min-h-screen w-full bg-[#e4e1d8b2] px-6 sm:px-16 py-6">
+      {/* Mobile Badge */}
       <div className="block md:hidden mb-4">
         <button className="px-4 py-2 border border-[#2d4122] rounded-3xl text-[#2d4122]">
           Our Partnership
         </button>
       </div>
+
       <div className="min-h-[90vh] w-full flex flex-col-reverse md:flex-row justify-center items-center p-5">
         {/* Left Section */}
-        <div className="w-full text-[#2d4122]  md:text-left">
+        <div className="w-full text-[#2d4122] md:text-left">
+          {/* Desktop Badge */}
           <div className="hidden md:block mb-4">
             <button className="px-4 py-2 border border-[#2d4122] rounded-3xl text-[#2d4122]">
               Our Partnership
             </button>
           </div>
-          <h1 className="text-3xl sm:text-[4rem] leading-none font-bold">Big Farmer Farm-Partnership Model</h1>
 
-          {/* Dynamic Title */}
-          <h3 ref={titleRef} className="text-lg sm:text-[1.5rem] mt-5">{partnerships[currentIndex].title}</h3>
+          <h1 className="text-3xl sm:text-[4rem] leading-none font-bold">
+            {`0${currentIndex + 1}`} Big Farmer Farm-Partnership Model
+          </h1>
 
-          {/* Dynamic Table */}
+          <h3 ref={titleRef} className="text-lg sm:text-[1.5rem] mt-5">
+            {partnerships[currentIndex].title}
+          </h3>
+
+          {/* Partnership Table */}
           <div className="overflow-x-auto">
-            <table ref={tableRef} className="w-full sm:w-[80%] border border-[#2d4122] text-[#2d4122] text-sm sm:text-lg md:mt-10 sm:mt-5">
+            <table
+              ref={tableRef}
+              className="w-full sm:w-[80%] border border-[#2d4122] text-[#2d4122] text-sm sm:text-lg md:mt-10 sm:mt-5"
+            >
               <thead>
                 <tr className="bg-[#2d4122] text-white">
                   <th className="border border-[#2d4122] p-3"></th>
@@ -144,14 +157,30 @@ function Partnership() {
               </tbody>
             </table>
           </div>
-          <button className="md:mt-10 px-6 py-4 border-b-2 border-[#2d4122] text-[#2d4122] w-fit">
-          View {partnerships[currentIndex].title}
+
+       
+
+          {/* CTA Button */}
+          <button
+            onClick={() => navigate("/franchise")}
+            className="group md:mt-10 px-6 py-4 border-b-2 border-[#2d4122] text-[#2d4122] hover:bg-[#2d4122] hover:text-white transition-all duration-300 flex items-center gap-2 w-fit mt-6"
+          >
+            Learn More About <span className="font-semibold">{partnerships[currentIndex].title}</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+            </svg>
           </button>
         </div>
 
-        {/* Right Section with Changing Image */}
-        <div className="w-full flex justify-center items-center mb-5 md:mb-0  md:justify-end">
-        <div className="w-full sm:w-[80%] h-60 sm:h-[70vh] rounded-3xl overflow-hidden">
+        {/* Right Section - Image */}
+        <div className="w-full flex justify-center items-center mb-5 md:mb-0 md:justify-end">
+          <div className="w-full sm:w-[80%] h-60 sm:h-[70vh] rounded-3xl overflow-hidden">
             <img
               ref={imageRef}
               src={partnerships[currentIndex].image}
