@@ -54,7 +54,8 @@ export default function MiniModelSection() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.utils.toArray(".fade-in").forEach((el) => {
+      // Fix: Specify element type for GSAP
+      gsap.utils.toArray<HTMLElement>(".fade-in").forEach((el) => {
         gsap.from(el, {
           opacity: 0,
           y: 40,
@@ -89,11 +90,11 @@ export default function MiniModelSection() {
       ref={containerRef}
       className="bg-[#EDEAE4] text-[#2D4122] px-4 md:px-16 py-20"
     >
-      <section className="fade-in text-center max-w-6xl mx-auto ">
-        <h1 className="text-4xl md:text-6xl font-serif font-bold leading-none ">
+      <section className="fade-in text-center max-w-6xl mx-auto">
+        <h1 className="text-4xl md:text-6xl font-serif font-bold leading-none">
           What is the Mini Model?
         </h1>
-        <p className="text-lg  text-[#2D4122]/80 max-w-2xl mx-auto ">
+        <p className="text-lg text-[#2D4122]/80 max-w-2xl mx-auto">
           A small step towards transforming rural agriculture.
         </p>
 
@@ -102,12 +103,12 @@ export default function MiniModelSection() {
           <img
             src="https://media.licdn.com/dms/image/v2/D5622AQF59KHYTNiceg/feedshare-shrink_1280/feedshare-shrink_1280/0/1727505839489?e=1747267200&v=beta&t=598YvT2i9-q0LpCBGN1L_3LLinF7CBxHNMyIOubNR9I"
             alt="Kisan Circle"
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50%] h-[50%] object-cover mix-blend-color-dodge border rounded-3xl "
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50%] h-[50%] object-cover mix-blend-color-dodge border rounded-3xl"
           />
           {points.map((point, i) => (
             <div
               key={i}
-              className={`point absolute w-48 md:w-[30vw] text-center text-xs md:text-sm  p-4 md:p-5 rounded-xl shadow-xl border border-[#2D4122]/50 ${point.style}`}
+              className={`point absolute w-48 md:w-[30vw] text-center text-xs md:text-sm p-4 md:p-5 rounded-xl shadow-xl border border-[#2D4122]/50 ${point.style}`}
             >
               <p className="font-semibold text-[#2D4122] text-sm md:text-base">
                 {point.title}
