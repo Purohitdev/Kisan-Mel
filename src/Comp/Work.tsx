@@ -195,7 +195,7 @@ const Work: React.FC = () => {
             ref={(el) => {
               if (el) boxRefs.current[i] = el;
             }}
-            className="border bg-cover bg-no-repeat bg-top h-[60vh] md:h-[70vh] w-[70vw] sm:w-[60vw] md:w-[50vh] rounded-3xl transition-all duration-500 scale-95 opacity-50 blur-sm"
+            className="border bg-cover bg-no-repeat bg-top h-[60vh] md:h-[70vh] w-[80vw] sm:w-[60vw] md:w-[50vh] rounded-3xl transition-all duration-500 scale-95 opacity-50 blur-sm"
             style={{ backgroundImage: `url(${box.img})` }}
           />
         ))}
