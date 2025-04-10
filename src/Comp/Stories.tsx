@@ -3,45 +3,55 @@ import gsap from "gsap";
 
 const storiesData = [
   {
-    "name": "Sita Ram Verma",
-    "model": "Fast Crop Model",
-    "land": "4 acres",
-    "location": "Hardoi, Uttar Pradesh",
-    "description": "Sita Ram started growing okra and leafy vegetables using drip irrigation. He earned profit in just 50 days and inspired 8 nearby farmers to try the same model.",
-    "image": "https://i.pinimg.com/736x/ab/d3/9c/abd39c905de130d458b568d5dce93dd5.jpg"
+    name: "Sita Ram Verma",
+    model: "Fast Crop Model",
+    land: "4 acres",
+    location: "Hardoi, Uttar Pradesh",
+    description:
+      "Sita Ram started growing okra and leafy vegetables using drip irrigation. He earned profit in just 50 days and inspired 8 nearby farmers to try the same model.",
+    image:
+      "https://i.pinimg.com/736x/ab/d3/9c/abd39c905de130d458b568d5dce93dd5.jpg",
   },
   {
-    "name": "Kamla Bai",
-    "model": "Medium-Term Crop Model",
-    "land": "6 acres",
-    "location": "Betul, Madhya Pradesh",
-    "description": "Kamla Bai used our model to grow turmeric with proper fertigation. Her crop gave good returns, and she reinvested to expand to 2 more acres next season Kamla Bai used our model to grow turmeric with proper fertigation. Her crop gave good returns, and she reinvested to expand to 2 more acres next season.",
-    "image": "https://i.pinimg.com/736x/6e/c0/4d/6ec04d15cc074ce65d2e89ba27b54b74.jpg"
+    name: "Kamla Bai",
+    model: "Medium-Term Crop Model",
+    land: "6 acres",
+    location: "Betul, Madhya Pradesh",
+    description:
+      "Kamla Bai used our model to grow turmeric with proper fertigation. Her crop gave good returns, and she reinvested to expand to 2 more acres next season.",
+    image:
+      "https://i.pinimg.com/736x/6e/c0/4d/6ec04d15cc074ce65d2e89ba27b54b74.jpg",
   },
   {
-    "name": "Jagdish Meena",
-    "model": "Custom Farm Model",
-    "land": "12 acres",
-    "location": "Tonk, Rajasthan",
-    "description": "Jagdish used a mix of papaya and seasonal vegetables with IoT monitoring. His income grew steadily, and he now employs 5 workers from his village Jagdish used a mix of papaya and seasonal vegetables with IoT monitoring. His income grew steadily, and he now employs 5 workers from his village.",
-    "image": "https://i.pinimg.com/736x/2b/90/b7/2b90b75c737128ef4748d41d627c402f.jpg"
+    name: "Jagdish Meena",
+    model: "Custom Farm Model",
+    land: "12 acres",
+    location: "Tonk, Rajasthan",
+    description:
+      "Jagdish used a mix of papaya and seasonal vegetables with IoT monitoring. His income grew steadily, and he now employs 5 workers from his village.",
+    image:
+      "https://i.pinimg.com/736x/2b/90/b7/2b90b75c737128ef4748d41d627c402f.jpg",
   },
   {
-    "name": "Nirmala Devi",
-    "model": "Fast Crop Model",
-    "land": "3 acres",
-    "location": "Nalanda, Bihar",
-    "description": "Nirmala grew early cauliflower and spinach. Using training from Kisan Mal, she sold produce directly to market and earned twice her previous income Nirmala grew early cauliflower and spinach. Using training from Kisan Mal, she sold produce directly to market and earned twice her previous income  she sold producee",
-    "image": "https://i.pinimg.com/736x/e6/da/97/e6da9788523374e9907ef9705516947d.jpg"
+    name: "Nirmala Devi",
+    model: "Fast Crop Model",
+    land: "3 acres",
+    location: "Nalanda, Bihar",
+    description:
+      "Nirmala grew early cauliflower and spinach. Using training from Kisan Mal, she sold produce directly to market and earned twice her previous income.",
+    image:
+      "https://i.pinimg.com/736x/e6/da/97/e6da9788523374e9907ef9705516947d.jpg",
   },
   {
-    "name": "Baldev Singh",
-    "model": "Medium-Term Crop Model",
-    "land": "7 acres",
-    "location": "Barnala, Punjab",
-    "description": "Baldev planted ginger using our model and software. He saved water with drip and got a bulk buyer from Delhi, making his season a big success Baldev planted ginger using our model and software. He saved water with drip and got a bulk buyer from Delhi, making his season a big success Baldev planted ginger using our model and software. He saved water with drip and got a.",
-    "image": "https://i.pinimg.com/736x/77/bc/4b/77bc4b6f2c255d037357ddca2b0d9f2d.jpg"
-  }
+    name: "Baldev Singh",
+    model: "Medium-Term Crop Model",
+    land: "7 acres",
+    location: "Barnala, Punjab",
+    description:
+      "Baldev planted ginger using our model and software. He saved water with drip and got a bulk buyer from Delhi, making his season a big success.",
+    image:
+      "https://i.pinimg.com/736x/77/bc/4b/77bc4b6f2c255d037357ddca2b0d9f2d.jpg",
+  },
 ];
 
 const Stories: React.FC = () => {
@@ -56,11 +66,13 @@ const Stories: React.FC = () => {
     }, 3000);
   };
 
+  const stopTimer = () => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+  };
+
   useEffect(() => {
     startTimer();
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
+    return () => stopTimer();
   }, []);
 
   useEffect(() => {
@@ -86,57 +98,65 @@ const Stories: React.FC = () => {
     setIndex((prevIndex) => (prevIndex - 1 + storiesData.length) % storiesData.length);
   };
 
-  const stopTimer = () => {
-    if (intervalRef.current) clearInterval(intervalRef.current);
-  };
-
   return (
-    <div className="bg-[#e4e1d8b2] px-4 sm:px-16 py-6 pb-12 text-[#e4e1d8b2] w-full relative">
+    <div className="bg-[#e4e1d8b2] px-4 sm:px-16 py-10 text-[#2d4122] w-full relative">
       <div
-        className="h-auto sm:h-[55vh] rounded-[2rem] bg-[#2d4122] p-6 sm:p-10 flex flex-col sm:flex-row justify-between  overflow-hidden"
+        className=" mx-auto h-auto rounded-3xl bg-[#2d4122] p-6 sm:p-10 flex flex-col sm:flex-row gap-6 overflow-hidden "
         onMouseEnter={stopTimer}
         onMouseLeave={startTimer}
       >
-        <div className="w-full sm:w-1/2 mb-6 sm:mb-0  pr-5">
-          <button className="px-4 py-2 border rounded-3xl w-fit mb-4 text-sm sm:text-base">Our Stories</button>
-          <h1 className="text-[2rem] sm:text-[2.5rem] font-bold text-white">Success Stories</h1>
-          <div ref={contentRef} className="text-white  p-4">
-            <h2 className="text-base sm:text-xl font-semibold">{storiesData[index].name}</h2>
-            <p className="text-md">{storiesData[index].model}</p>
-            <p className="text-md">{storiesData[index].land}</p>
-            <p className="text-md">{storiesData[index].location}</p>
-            <p className="text-md mt-4">“{storiesData[index].description}”</p>
+        {/* Content Section */}
+        <div className="w-full sm:w-1/2">
+          <button className="px-4 py-2 border rounded-3xl mb-4 text-sm sm:text-base text-white border-white">
+            Our Stories
+          </button>
+          <h1 className="text-[1.8rem] sm:text-[2.5rem] font-bold text-white mb-4">
+            Success Stories
+          </h1>
+          <div ref={contentRef} className="text-white space-y-1 sm:space-y-2">
+            <h2 className="text-lg sm:text-xl font-semibold">{storiesData[index].name}</h2>
+            <p className="text-sm sm:text-base">{storiesData[index].model}</p>
+            <p className="text-sm sm:text-base">{storiesData[index].land}</p>
+            <p className="text-sm sm:text-base">{storiesData[index].location}</p>
+            <p className="text-sm sm:text-base mt-3 leading-relaxed">
+              “{storiesData[index].description}”
+            </p>
           </div>
         </div>
-        <div className="w-full sm:w-1/2 flex items-center">
+
+        {/* Image Section */}
+        <div className="w-full sm:w-1/2 flex items-center justify-center">
           <img
             ref={imageRef}
             src={storiesData[index].image}
             alt={storiesData[index].name}
-            className="h-[60vw] sm:h-[80%] w-full object-cover rounded-[2rem]"
+            className="h-[60vw] sm:h-[80%] max-h-[400px] w-full object-cover rounded-2xl"
           />
         </div>
 
+        {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-8 top-1/2 -translate-y-1/2 h-[40px] sm:h-[50px] w-[40px] sm:w-[50px] bg-white text-black rounded-full shadow-lg backdrop-blur-md border border-white/20 hover:bg-white/20 transition duration-300 flex items-center justify-center"
+          className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 h-10 sm:h-12 w-10 sm:w-12 bg-white text-black rounded-full shadow-md hover:bg-white/80 transition flex items-center justify-center"
         >
           ❮
         </button>
-
         <button
           onClick={nextSlide}
-          className="absolute right-8 top-1/2 -translate-y-1/2 h-[40px] sm:h-[50px] w-[40px] sm:w-[50px] bg-white text-black rounded-full shadow-lg backdrop-blur-md border border-white/20 hover:bg-white/20 transition duration-300 flex items-center justify-center"
+          className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 h-10 sm:h-12 w-10 sm:w-12 bg-white text-black rounded-full shadow-md hover:bg-white/80 transition flex items-center justify-center"
         >
           ❯
         </button>
 
+        {/* Dots */}
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
           {storiesData.map((_, i) => (
             <span
               key={i}
-              className={`h-2 sm:h-3 w-2 sm:w-3 rounded-full transition-all duration-300 ${i === index ? 'bg-[#2d4122]' : 'bg-[#2d412287]'}`}
-            ></span>
+              className={`h-2 sm:h-3 w-2 sm:w-3 rounded-full transition-all duration-300 ${
+                i === index ? "bg-[#2d4122]" : "bg-[#2d412292]"
+              }`}
+            />
           ))}
         </div>
       </div>
