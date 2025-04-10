@@ -1,21 +1,4 @@
-const partnerships = [
-  {
-    title: "25% - 75% Partnership",
-    image: "/p4.png",
-  },
-  {
-    title: "40% - 60% Partnership",
-    image: "/p2.png",
-  },
-  {
-    title: "50% - 50% Partnership",
-    image: "/p3.png",
-  },
-  {
-    title: "Franchise Model",
-    image: "/p1.png",
-  },
-];
+
 
 const franchiseOfferings = [
   { title: "Retail Shop Owner", image: "/p1.png" },
