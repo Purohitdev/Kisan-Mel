@@ -54,7 +54,7 @@ function Service() {
   return (
     <div className="min-h-fit w-full bg-[#e4e1d8b2] text-[#2d4122] px-5 md:px-16 py-10 pb-32" ref={serviceRef}>
       <h1 className="text-[2rem] md:text-[2.5rem] font-extrabold mt-5 text-center leading-none">
-        Services Kisanमेल Farm model offers
+        Services Kisan-मेल Farm model offers
       </h1>
       <p className="text-[1rem] mt-3 text-center max-w-3xl mx-auto">
         Inspiring farmers to upgrade their farm land based on our model. We provide training and free visit programs on a fixed date every month.

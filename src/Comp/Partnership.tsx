@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -11,21 +12,45 @@ const partnerships = [
     investment: ["0%", "100%"],
     management: ["100%", "0%"],
     returns: ["25%", "75%"],
-    image: "https://i.pinimg.com/736x/a1/cd/ed/a1cded971e3f7e2416bef74a07a501f2.jpg",
+    image: "/p4.png",
+    model: "Big Farmer",
+    type:"Partnership Model",
+    button:"Our Partnership"
   },
   {
     title: "40% - 60% KisanMel Partnership",
     investment: ["10%", "90%"],
     management: ["80%", "20%"],
     returns: ["40%", "60%"],
-    image: "https://i.pinimg.com/736x/05/ae/15/05ae154c9e5444b530a8c480796242e5.jpg",
+    image: "/p2.png",
+    model: "Middle Farmer",
+    type:"Partnership Model",
+    button:"Our Partnership"
+
   },
   {
     title: "50% - 50% KisanMel Partnership",
     investment: ["50%", "50%"],
     management: ["50%", "50%"],
     returns: ["50%", "50%"],
-    image: "https://i.pinimg.com/736x/54/88/fd/5488fd7f44773e347e716771c577530d.jpg",
+    image: "/p3.png",
+    model: "Small Farmer",
+    type:"Partnership Model",
+    button:"Our Partnership"
+
+
+  },
+  {
+    title: "50% - 50% KisanMel Partnership",
+    investment: ["50%", "50%"],
+    management: ["50%", "50%"],
+    returns: ["50%", "50%"],
+    image: "/p5.png",
+    model: "Franchise",
+    type:"KisanMel Agri Showroom",
+    button:"Our Franchise"
+
+
   },
 ];
 
@@ -36,7 +61,7 @@ function Partnership() {
   const imageRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const navigate = useNavigate(); // ✅ useNavigate must be inside the component
+  const navigate = useNavigate();
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -86,7 +111,7 @@ function Partnership() {
         imageRef.current,
         { scale: 1 },
         {
-          scale: 1.3,
+          scale: 1.2,
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top center",
@@ -107,19 +132,27 @@ function Partnership() {
         </button>
       </div>
 
-      <div className="min-h-[90vh] w-full flex flex-col-reverse md:flex-row justify-center items-center p-5">
+      <div
+        className={`min-h-[90vh] w-full flex flex-col-reverse ${
+          currentIndex === 3 ? "md:flex-row-reverse" : "md:flex-row"
+        } justify-center items-center p-5`}
+      >
         {/* Left Section */}
         <div className="w-full text-[#2d4122] md:text-left">
           {/* Desktop Badge */}
           <div className="hidden md:block mb-4">
             <button className="px-4 py-2 border border-[#2d4122] rounded-3xl text-[#2d4122]">
-              Our Partnership
+            {partnerships[currentIndex].button}
             </button>
           </div>
 
           <h1 className="text-3xl sm:text-[4rem] leading-none font-bold">
-            {`0${currentIndex + 1}`} Big Farmer Farm-Partnership Model
+            {`0${currentIndex + 1}-`} {partnerships[currentIndex].model}
           </h1>
+
+          <h3 className="text-3xl sm:text-[2rem] leading-none font-bold">
+          {partnerships[currentIndex].type}
+          </h3>
 
           <h3 ref={titleRef} className="text-lg sm:text-[1.5rem] mt-5">
             {partnerships[currentIndex].title}
@@ -158,8 +191,6 @@ function Partnership() {
             </table>
           </div>
 
-       
-
           {/* CTA Button */}
           <button
             onClick={() => navigate("/franchise")}
@@ -179,13 +210,23 @@ function Partnership() {
         </div>
 
         {/* Right Section - Image */}
-        <div className="w-full flex justify-center items-center mb-5 md:mb-0 md:justify-end">
-          <div className="w-full sm:w-[80%] h-60 sm:h-[70vh] rounded-3xl overflow-hidden">
+        <div
+          className={` flex justify-center items-center mb-5 md:mb-0  ${
+            currentIndex === 3 ? "md:justify-start w-[70%]" : "md:justify-end w-full"
+          }`}
+        >
+          <div
+            className={`rounded-3xl overflow-hidden transition-all duration-500  ${
+              currentIndex === 3
+                ? "w-[100%] h-40 sm:w-[80%] sm:h-[80vh] rounded-3xl "
+                : "w-full sm:w-[80%] h-60 sm:h-[70vh] "
+            }`}
+          >
             <img
               ref={imageRef}
               src={partnerships[currentIndex].image}
               alt="Farm"
-              className="w-full h-full object-cover transition-all duration-500"
+              className="w-full h-full object-contain"
             />
           </div>
         </div>

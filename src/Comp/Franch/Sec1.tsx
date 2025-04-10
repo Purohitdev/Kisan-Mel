@@ -1,17 +1,27 @@
-
 const partnerships = [
   {
-    title: "25% - 75% KisanMel Partnership",
-    image: "https://i.pinimg.com/736x/a1/cd/ed/a1cded971e3f7e2416bef74a07a501f2.jpg",
+    title: "25% - 75% Partnership",
+    image: "/p4.png",
   },
   {
-    title: "40% - 60% KisanMel Partnership",
-    image: "https://i.pinimg.com/736x/05/ae/15/05ae154c9e5444b530a8c480796242e5.jpg",
+    title: "40% - 60% Partnership",
+    image: "/p2.png",
   },
   {
-    title: "50% - 50% KisanMel Partnership",
-    image: "https://i.pinimg.com/736x/54/88/fd/5488fd7f44773e347e716771c577530d.jpg",
+    title: "50% - 50% Partnership",
+    image: "/p3.png",
   },
+  {
+    title: "Franchise Model",
+    image: "/p1.png",
+  },
+];
+
+const franchiseOfferings = [
+  { title: "Retail Shop Owner", image: "/p1.png" },
+  { title: "Agri Entrepreneur", image: "/p2.png" },
+  { title: "Local Marketing Support", image: "/p3.png" },
+  { title: "Trading Partner", image: "/p4.png" },
 ];
 
 const advantages = [
@@ -25,20 +35,19 @@ const advantages = [
 function Sec1() {
   return (
     <div className="bg-[#e4e1d8b2] text-[#2d4122] font-sans">
-
-<div className="absolute top-4 left-4 z-50">
-  <a
-    href="/"
-    className="bg-[#2d4122] text-white px-6 py-3 rounded-full text-sm font-medium shadow hover:bg-[#3b5c2f] transition duration-300"
-  >
-    Back to Website
-  </a>
-</div>
+      <div className="absolute top-4 left-4 z-50">
+        <a
+          href="/"
+          className="bg-[#2d4122] text-white px-6 py-3 rounded-full text-sm font-medium shadow hover:bg-[#3b5c2f] transition duration-300"
+        >
+          Back to Website
+        </a>
+      </div>
 
       {/* Banner */}
       <div className="relative w-full h-[80vh]">
         <img
-          src="https://i.pinimg.com/736x/d7/72/aa/d772aa69f4996f7059b3274cd0e7aaf6.jpg"
+          src="https://franchiseindia.s3.ap-south-1.amazonaws.com/uploads/content/fi/art/5d0a0cb3d5fc7.jpeg"
           alt="Franchise Banner"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -51,7 +60,7 @@ function Sec1() {
 
       {/* Bento Grid */}
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 grid grid-cols-1 md:grid-cols-6 gap-6">
-        {/* Our Story - Full Width */}
+        {/* Our Story */}
         <div className="bg-white p-8 rounded-2xl shadow-md md:col-span-6">
           <h2 className="text-6xl font-black mb-4">Our Story</h2>
           <p className="text-lg leading-8 text-[#3b4f36] font-medium">
@@ -62,13 +71,18 @@ function Sec1() {
           </p>
         </div>
 
-        {/* Partnership Types */}
+        {/* Franchise Offerings (now shows cards) */}
         <div className="bg-white p-6 rounded-2xl shadow-md md:col-span-3">
-          <h2 className="text-4xl font-bold mb-4">Partnership Types</h2>
+          <h2 className="text-4xl font-bold mb-4">Franchise Offerings</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {partnerships.map((item, idx) => (
+            {franchiseOfferings.map((item, idx) => (
               <div key={idx} className="rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
-                <img src={item.image} alt={item.title} className="h-28 w-full object-cover" />
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="h-28 w-full object-cover"
+                  style={{ objectPosition: "50% 20%" }}
+                />
                 <div className="p-3">
                   <p className="text-md font-semibold text-[#2d4122]">{item.title}</p>
                 </div>
@@ -77,18 +91,21 @@ function Sec1() {
           </div>
         </div>
 
-        {/* Challenges */}
+        {/* Partnership Types (now shows list) */}
         <div className="bg-white p-6 rounded-2xl shadow-md md:col-span-3">
-          <h2 className="text-4xl font-bold  mb-4">Challenges & Solutions</h2>
-          <p className="text-base mb-2">
-            <strong>Challenges:</strong> Confidence in rural logistics, consistent onboarding, and support access.
-          </p>
-          <p className="text-base">
-            <strong>Solutions:</strong> Tech-enabled franchise training, dedicated support, and local trust building ensure success.
+          <h2 className="text-4xl font-bold mb-4">Partnership Types</h2>
+          <ul className="list-disc pl-5 space-y-2 text-base">
+            <li>25% - 75% revenue sharing model</li>
+            <li>40% - 60% regional partnership</li>
+            <li>50% - 50% shared franchise ownership</li>
+            <li>Full Franchise Model under KisanMel</li>
+          </ul>
+          <p className="text-base mt-4">
+            Choose the type of partnership that fits your capacity and goals. Each model ensures transparency and profitability with dedicated regional and supply-chain support.
           </p>
         </div>
 
-        {/* Features */}
+        {/* Key Features */}
         <div className="bg-white p-6 rounded-2xl shadow-md md:col-span-2">
           <h2 className="text-2xl font-bold mb-4">Key Features</h2>
           <ul className="list-disc pl-5 space-y-2 text-base">
