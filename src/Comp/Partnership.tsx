@@ -130,9 +130,8 @@ function Partnership() {
       </div>
 
       <div
-        className={`w-full flex flex-col-reverse ${
-          currentIndex === 3 ? "md:flex-row-reverse" : "md:flex-row"
-        } items-center justify-between gap-8 md:gap-16`}
+        className={`w-full flex flex-col-reverse ${currentIndex === 3 ? "md:flex-row-reverse" : "md:flex-row"
+          } items-center justify-between gap-8 md:gap-16`}
       >
         {/* Left Section */}
         <div className="w-full md:w-1/2 text-[#2d4122]">
@@ -160,7 +159,7 @@ function Partnership() {
 
           {/* Partnership Table */}
           <div className="overflow-x-auto mt-4 w-full md:w-[80%]">
-          <table
+            <table
               ref={tableRef}
               className="min-w-full border border-[#2d4122] text-[#2d4122] text-sm sm:text-base "
             >
@@ -193,10 +192,13 @@ function Partnership() {
 
           {/* CTA Button */}
           <button
-            onClick={() => navigate("/franchise")}
+            onClick={() => {
+              window.scrollTo(0, 0);
+              navigate("/franchise");
+            }}
             className="group mt-6 md:mt-10 px-6 py-3 border-b-2 border-[#2d4122] text-[#2d4122] hover:bg-[#2d4122] hover:text-white transition-all duration-300 flex items-center gap-2 w-fit"
           >
-             <span className="font-semibold">learn more {partnerships[currentIndex].title}</span>
+            <span className="font-semibold">learn more {partnerships[currentIndex].title}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
@@ -211,16 +213,14 @@ function Partnership() {
 
         {/* Right Section - Image */}
         <div
-          className={`w-full md:w-1/2 flex justify-center items-center ${
-            currentIndex === 3 ? "md:justify-start" : "md:justify-end"
-          }`}
+          className={`w-full md:w-1/2 flex justify-center items-center ${currentIndex === 3 ? "md:justify-start" : "md:justify-end"
+            }`}
         >
           <div
-            className={`rounded-3xl overflow-hidden transition-all duration-500 ${
-              currentIndex === 3
+            className={`rounded-3xl overflow-hidden transition-all duration-500 ${currentIndex === 3
                 ? "w-full h-40 sm:w-[80%] sm:h-[80vh]"
                 : "w-full sm:w-[80%] h-60 sm:h-[70vh]"
-            }`}
+              }`}
           >
             <img
               ref={imageRef}
