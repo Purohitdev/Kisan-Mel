@@ -25,13 +25,13 @@
 
 //       const totalScroll = wrapper.scrollWidth - window.innerWidth;
 
-//       // Scroll & Pin animation
 //       ScrollTrigger.create({
 //         trigger: containerRef.current,
 //         start: "top top",
 //         end: `+=${totalScroll}`,
 //         scrub: 1,
 //         pin: true,
+//         anticipatePin: 1,
 //         animation: gsap.to(wrapper, {
 //           x: -totalScroll,
 //           ease: "power1.out",
@@ -39,7 +39,6 @@
 //         onUpdate: () => {
 //           const center = window.innerWidth / 2;
 
-//           // Optimize DOM reads & writes
 //           requestAnimationFrame(() => {
 //             boxRefs.current.forEach((box) => {
 //               const rect = box.getBoundingClientRect();
@@ -71,11 +70,11 @@
 //       {/* Header */}
 //       <div className="h-auto md:h-[20vh] px-6 py-4 flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
 //         <div className="flex flex-col gap-2">
-//           <h1 className="text-[2.5rem] md:text-[3.5rem] leading-none font-bold">
+//           <h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] leading-none font-bold">
 //             How We Are Helping Farmers
 //           </h1>
 //         </div>
-//         <p className="text-lg md:text-base md:w-[30%]">
+//         <p className="text-base sm:text-lg md:text-base md:w-[30%]">
 //           At KisanMel, we analyze your farm and climate to guide profitable crop choices and provide all essentials through our dedicated agri-showrooms.
 //         </p>
 //       </div>
@@ -83,14 +82,15 @@
 //       {/* Scroll Boxes */}
 //       <div
 //         ref={wrapperRef}
-//         className="md:h-[70vh] flex items-center gap-4 md:gap-8 relative w-max mt-[30px] px-[50vw]"
+//         className="md:h-[70vh] flex items-center gap-4 md:gap-8 relative w-max mt-[30px] px-[40vw] md:px-[50vw]"
 //       >
 //         {workBoxes.map((box, i) => (
 //           <div
 //             key={i}
 //             ref={(el) => {
 //               if (el) boxRefs.current[i] = el;
-//             }}            className="border bg-cover bg-no-repeat bg-top h-[70vh] md:h-full w-[80vw] md:w-[50vh] rounded-3xl transition-all duration-500 scale-95 opacity-50 blur-sm"
+//             }}
+//             className="border bg-cover bg-no-repeat bg-top h-[60vh] md:h-[70vh] w-[80vw] sm:w-[60vw] md:w-[50vh] rounded-3xl transition-all duration-500 scale-95 opacity-50 blur-sm"
 //             style={{ backgroundImage: `url(${box.img})` }}
 //           />
 //         ))}
@@ -102,10 +102,10 @@
 // export default Work;
 
 
-
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useLanguage } from "../Lang"; // ✅ Global Language Context
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -119,9 +119,22 @@ const workBoxes = [
 ];
 
 const Work: React.FC = () => {
+  const { lang } = useLanguage(); // ✅ Correctly placed inside component
+
+  const [textData, setTextData] = useState<{ heading: any; paragraph: any }>({
+    heading: { en: "", hi: "" },
+    paragraph: { en: "", hi: "" },
+  });
+
   const containerRef = useRef(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const boxRefs = useRef<HTMLDivElement[]>([]);
+
+  useEffect(() => {
+    fetch("/workData.json")
+      .then((res) => res.json())
+      .then((data) => setTextData(data));
+  }, []);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -176,15 +189,15 @@ const Work: React.FC = () => {
       <div className="h-auto md:h-[20vh] px-6 py-4 flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
         <div className="flex flex-col gap-2">
           <h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] leading-none font-bold">
-            How We Are Helping Farmers
+            {textData.heading[lang]}
           </h1>
         </div>
         <p className="text-base sm:text-lg md:text-base md:w-[30%]">
-          At KisanMel, we analyze your farm and climate to guide profitable crop choices and provide all essentials through our dedicated agri-showrooms.
+          {textData.paragraph[lang]}
         </p>
       </div>
 
-      {/* Scroll Boxes */}
+      {/* Scrollable Boxes */}
       <div
         ref={wrapperRef}
         className="md:h-[70vh] flex items-center gap-4 md:gap-8 relative w-max mt-[30px] px-[40vw] md:px-[50vw]"

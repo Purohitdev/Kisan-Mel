@@ -1,0 +1,65 @@
+{
+    "services": [
+      {
+        "title": {
+          "en": "Farm Research",
+          "hi": "फार्म अनुसंधान"
+        },
+        "description": {
+          "en": "We analyze your farm’s soil and climate to suggest crops that bring maximum growth and profit.",
+          "hi": "हम आपकी ज़मीन और जलवायु का विश्लेषण कर अधिकतम लाभ देने वाली फसलें सुझाते हैं।"
+        }
+      },
+      {
+        "title": {
+          "en": "Smart Crop Planning",
+          "hi": "स्मार्ट फसल योजना"
+        },
+        "description": {
+          "en": "Based on farm conditions and market demand, we guide you to grow the most profitable and suitable crops.",
+          "hi": "खेत की स्थिति और बाज़ार मांग के आधार पर हम लाभदायक फसलें चुनने में मदद करते हैं।"
+        }
+      },
+      {
+        "title": {
+          "en": "Agri Showrooms",
+          "hi": "कृषि शोरूम"
+        },
+        "description": {
+          "en": "Get seeds, tools, fertilizers, and more at one place — our agri-showrooms cater to all your farming needs.",
+          "hi": "बीज, उपकरण, उर्वरक जैसी सभी आवश्यक चीज़ें हमारे कृषि शोरूम में एक ही स्थान पर उपलब्ध हैं।"
+        }
+      },
+      {
+        "title": {
+          "en": "Full Support",
+          "hi": "सम्पूर्ण सहायता"
+        },
+        "description": {
+          "en": "From testing soil to post-harvest advice, we support you at every step of your farming journey.",
+          "hi": "मिट्टी की जांच से लेकर फसल कटाई के बाद तक हम हर कदम पर आपका साथ देते हैं।"
+        }
+      },
+      {
+        "title": {
+          "en": "Profit Ecosystem",
+          "hi": "मुनाफ़े का इकोसिस्टम"
+        },
+        "description": {
+          "en": "Our model boosts profits by combining smart crop choices with easy access to essential farming resources.",
+          "hi": "हमारा मॉडल स्मार्ट फसल चयन और जरूरी संसाधनों की आसान उपलब्धता से मुनाफ़ा बढ़ाता है।"
+        }
+      },
+      {
+        "title": {
+          "en": "Farmer Empowerment",
+          "hi": "किसान सशक्तिकरण"
+        },
+        "description": {
+          "en": "We modernize traditional farming by equipping farmers with expert guidance, quality tools, and market-oriented strategies.",
+          "hi": "हम विशेषज्ञ मार्गदर्शन, गुणवत्ता वाले उपकरण और मार्केट रणनीति से पारंपरिक खेती को आधुनिक बनाते हैं।"
+        }
+      }
+    ]
+  }
+  

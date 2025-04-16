@@ -1,0 +1,35 @@
+{
+    "buttonText": {
+      "en": "Our Achievements",
+      "hi": "हमारी उपलब्धियाँ"
+    },
+    "heading": {
+      "en": "Made farmers' life easier",
+      "hi": "किसानों का जीवन आसान बनाया"
+    },
+    "achievements": [
+      {
+        "icon": "GiFarmer",
+        "title": {
+          "en": "Introduced IoT devices into farming",
+          "hi": "खेती में IoT डिवाइस की शुरुआत"
+        },
+        "description": {
+          "en": "We introduced IoT devices that help farmers monitor soil and weather, improving farm management and productivity.",
+          "hi": "हमने ऐसे IoT उपकरण पेश किए जो किसानों को मिट्टी और मौसम की निगरानी में मदद करते हैं, जिससे खेती बेहतर हुई।"
+        }
+      },
+      {
+        "icon": "GiProfit",
+        "title": {
+          "en": "Substantially increased farmers' profits",
+          "hi": "किसानों की आय में बड़ा इज़ाफा"
+        },
+        "description": {
+          "en": "With smart planning and technology, we helped farmers earn more and improve their crop profits.",
+          "hi": "स्मार्ट योजना और तकनीक से हमने किसानों की आय और फ़सल लाभ दोनों बढ़ाए।"
+        }
+      }
+    ]
+  }
+  

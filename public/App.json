@@ -1,0 +1,105 @@
+{
+    "app": {
+      "button": {
+        "en": "Our Technology",
+        "hi": "हमारी तकनीक"
+      },
+      "title": {
+        "en": "Download the app now",
+        "hi": "एप अभी डाउनलोड करें"
+      },
+      "features": {
+        "en": ["Crop Selection", "Management", "Market Connect", "Farmer Partnership"],
+        "hi": ["फसल चयन", "प्रबंधन", "बाजार संपर्क", "किसान साझेदारी"]
+      },
+      "platformHeading": {
+        "en": "KisanMel Mobile Platform provides:",
+        "hi": "किसानमेल मोबाइल प्लेटफार्म प्रदान करता है:"
+      },
+      "platformFeatures": {
+        "en": [
+          "Crop selection suggestions",
+          "Farm management solutions",
+          "Expert farm advisories",
+          "Partnership model for big",
+          "Market connect"
+        ],
+        "hi": [
+          "फसल चयन सुझाव",
+          "फार्म प्रबंधन समाधान",
+          "विशेषज्ञ कृषि सलाह",
+          "बड़े किसानों के लिए साझेदारी मॉडल",
+          "बाजार से जोड़ना"
+        ]
+      },
+      "platformFeatures2": {
+        "en": [
+          "Weather-based crop",
+          "Real-time market price",
+          "Automated farm activity",
+          "Personalized farming",
+          "Online expert"
+        ],
+        "hi": [
+          "मौसम आधारित फसल",
+          "वास्तविक समय बाजार मूल्य",
+          "स्वचालित फार्म गतिविधि",
+          "व्यक्तिगत खेती समाधान",
+          "ऑनलाइन विशेषज्ञ समर्थन"
+        ]
+      }
+    },
+    "iot": {
+      "button": {
+        "en": "Automate Your Farm",
+        "hi": "अपने खेत को स्वचालित करें"
+      },
+      "title": {
+        "en": "Our IoT Solution",
+        "hi": "हमारा IoT समाधान"
+      },
+      "sections": [
+        {
+          "heading": {
+            "en": "Drip Line Irrigation Automation",
+            "hi": "ड्रिप सिंचाई स्वचालन"
+          },
+          "points": {
+            "en": [
+              "Automatic irrigation system",
+              "Automatic Fertilizer supply",
+              "Nutricent management of farm",
+              "Remote water level monitoring"
+            ],
+            "hi": [
+              "स्वचालित सिंचाई प्रणाली",
+              "स्वचालित उर्वरक आपूर्ति",
+              "खेत का पोषण प्रबंधन",
+              "दूरस्थ जल स्तर निगरानी"
+            ]
+          }
+        },
+        {
+          "heading": {
+            "en": "Farm Security Management",
+            "hi": "फार्म सुरक्षा प्रबंधन"
+          },
+          "points": {
+            "en": [
+              "Monitor your farm remotely",
+              "Daily live monitoring",
+              "Animal protection features",
+              "Alarm and night light activation"
+            ],
+            "hi": [
+              "खेत की दूरस्थ निगरानी",
+              "दैनिक लाइव निगरानी",
+              "पशु सुरक्षा सुविधाएं",
+              "अलार्म और नाइट लाइट सक्रियता"
+            ]
+          }
+        }
+      ]
+    }
+  }
+  

@@ -1,0 +1,23 @@
+{
+    "heading": {
+      "en": "Meet Our Team",
+      "hi": "हमारी टीम से मिलें"
+    },
+    "subheading": {
+      "en": "The minds and hearts behind KisanMel — empowering India's farmers through innovation and care.",
+      "hi": "किसानमेल की टीम — जो किसानों को नवाचार और देखभाल से सशक्त बनाती है।"
+    },
+    "members": [
+      {
+        "name": "Sourav",
+        "role": {
+          "en": "Founder & CEO",
+          "hi": "संस्थापक और सीईओ"
+        },
+        "image": "/main.png",
+        "email": "Sourav@kisanmel.in",
+        "linkedin": "https://linkedin.com/in/ramesh-kumar"
+      }
+    ]
+  }
+  

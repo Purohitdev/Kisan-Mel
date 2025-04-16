@@ -1,0 +1,120 @@
+{
+    "stories": [
+      {
+        "name": {
+          "en": "Sita Ram Verma",
+          "hi": "सीता राम वर्मा"
+        },
+        "model": {
+          "en": "Fast Crop Model",
+          "hi": "तेज फसल मॉडल"
+        },
+        "land": {
+          "en": "4 acres",
+          "hi": "4 एकड़"
+        },
+        "location": {
+          "en": "Hardoi, Uttar Pradesh",
+          "hi": "हरदोई, उत्तर प्रदेश"
+        },
+        "description": {
+          "en": "Sita Ram started growing okra and leafy vegetables using drip irrigation. He earned profit in just 50 days and inspired 8 nearby farmers to try the same model.",
+          "hi": "सीता राम ने ड्रिप सिंचाई से भिंडी और पत्तेदार सब्जियाँ उगाना शुरू किया। सिर्फ 50 दिनों में मुनाफा कमाया और 8 किसानों को भी प्रेरित किया।"
+        },
+        "image": "https://i.pinimg.com/736x/ab/d3/9c/abd39c905de130d458b568d5dce93dd5.jpg"
+      },
+      {
+        "name": {
+          "en": "Kamla Bai",
+          "hi": "कमला बाई"
+        },
+        "model": {
+          "en": "Medium-Term Crop Model",
+          "hi": "मध्यम अवधि फसल मॉडल"
+        },
+        "land": {
+          "en": "6 acres",
+          "hi": "6 एकड़"
+        },
+        "location": {
+          "en": "Betul, Madhya Pradesh",
+          "hi": "बैतूल, मध्य प्रदेश"
+        },
+        "description": {
+          "en": "Kamla Bai used our model to grow turmeric with proper fertigation. Her crop gave good returns, and she reinvested to expand to 2 more acres next season.",
+          "hi": "कमला बाई ने हमारे मॉडल से हल्दी उगाई। अच्छा मुनाफा कमाया और अगली बार 2 एकड़ और बढ़ाया।"
+        },
+        "image": "https://i.pinimg.com/736x/6e/c0/4d/6ec04d15cc074ce65d2e89ba27b54b74.jpg"
+      },
+      {
+        "name": {
+          "en": "Jagdish Meena",
+          "hi": "जगदीश मीणा"
+        },
+        "model": {
+          "en": "Custom Farm Model",
+          "hi": "कस्टम फार्म मॉडल"
+        },
+        "land": {
+          "en": "12 acres",
+          "hi": "12 एकड़"
+        },
+        "location": {
+          "en": "Tonk, Rajasthan",
+          "hi": "टोंक, राजस्थान"
+        },
+        "description": {
+          "en": "Jagdish used a mix of papaya and seasonal vegetables with IoT monitoring. His income grew steadily, and he now employs 5 workers from his village.",
+          "hi": "जगदीश ने पपीता और मौसमी सब्जियों का मिश्रण उगाया और IoT से निगरानी की। अब वह गांव के 5 लोगों को रोजगार दे रहे हैं।"
+        },
+        "image": "https://i.pinimg.com/736x/2b/90/b7/2b90b75c737128ef4748d41d627c402f.jpg"
+      },
+      {
+        "name": {
+          "en": "Nirmala Devi",
+          "hi": "निर्मला देवी"
+        },
+        "model": {
+          "en": "Fast Crop Model",
+          "hi": "तेज फसल मॉडल"
+        },
+        "land": {
+          "en": "3 acres",
+          "hi": "3 एकड़"
+        },
+        "location": {
+          "en": "Nalanda, Bihar",
+          "hi": "नालंदा, बिहार"
+        },
+        "description": {
+          "en": "Nirmala grew early cauliflower and spinach. Using training from KisanMel, she sold produce directly to market and earned twice her previous income.",
+          "hi": "निर्मला ने फूलगोभी और पालक उगाया। किसानमेल के प्रशिक्षण से सीधे बाजार में बेचा और दोगुनी कमाई की।"
+        },
+        "image": "https://i.pinimg.com/736x/e6/da/97/e6da9788523374e9907ef9705516947d.jpg"
+      },
+      {
+        "name": {
+          "en": "Baldev Singh",
+          "hi": "बलदेव सिंह"
+        },
+        "model": {
+          "en": "Medium-Term Crop Model",
+          "hi": "मध्यम अवधि फसल मॉडल"
+        },
+        "land": {
+          "en": "7 acres",
+          "hi": "7 एकड़"
+        },
+        "location": {
+          "en": "Barnala, Punjab",
+          "hi": "बरनाला, पंजाब"
+        },
+        "description": {
+          "en": "Baldev planted ginger using our model and software. He saved water with drip and got a bulk buyer from Delhi, making his season a big success.",
+          "hi": "बलदेव ने अदरक की खेती की। ड्रिप से पानी बचाया और दिल्ली से थोक खरीदार मिला, जिससे अच्छा मुनाफा हुआ।"
+        },
+        "image": "https://i.pinimg.com/736x/77/bc/4b/77bc4b6f2c255d037357ddca2b0d9f2d.jpg"
+      }
+    ]
+  }
+  
