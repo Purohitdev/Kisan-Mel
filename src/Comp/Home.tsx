@@ -11,6 +11,7 @@ import Contact from './Contact'
 import Clints from './Clints'
 import Banner from './Banner'
 import Footer from '../Footer'
+import TeamSection from './Team'
 
 function Home() {
   return (
@@ -23,6 +24,8 @@ function Home() {
    <Testimonals/>
    <Service/>
    <App_promo/>
+   <TeamSection/>
+   
    <Achivemnet/>
    <Contact/>
    <Clints/>

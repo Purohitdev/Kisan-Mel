@@ -1,0 +1,77 @@
+{
+    "partnerships": [
+      {
+        "model": {
+          "en": "Big Farmer",
+          "hi": "बड़ा किसान"
+        },
+        "type": {
+          "en": "Partnership Model",
+          "hi": "साझेदारी मॉडल"
+        },
+        "title": {
+          "en": "25% - 75% KisanMel Partnership",
+          "hi": "25% - 75% किसानमेल साझेदारी"
+        },
+        "button": {
+          "en": "Our Partnership",
+          "hi": "हमारी साझेदारी"
+        }
+      },
+      {
+        "model": {
+          "en": "Middle Farmer",
+          "hi": "मध्यम किसान"
+        },
+        "type": {
+          "en": "Partnership Model",
+          "hi": "साझेदारी मॉडल"
+        },
+        "title": {
+          "en": "40% - 60% KisanMel Partnership",
+          "hi": "40% - 60% किसानमेल साझेदारी"
+        },
+        "button": {
+          "en": "Our Partnership",
+          "hi": "हमारी साझेदारी"
+        }
+      },
+      {
+        "model": {
+          "en": "Small Farmer",
+          "hi": "छोटा किसान"
+        },
+        "type": {
+          "en": "Partnership Model",
+          "hi": "साझेदारी मॉडल"
+        },
+        "title": {
+          "en": "50% - 50% KisanMel Partnership",
+          "hi": "50% - 50% किसानमेल साझेदारी"
+        },
+        "button": {
+          "en": "Our Partnership",
+          "hi": "हमारी साझेदारी"
+        }
+      },
+      {
+        "model": {
+          "en": "Franchise",
+          "hi": "फ्रेंचाइज़ी"
+        },
+        "type": {
+          "en": "KisanMel Agri Showroom",
+          "hi": "किसानमेल एग्री शोरूम"
+        },
+        "title": {
+          "en": "50% - 50% KisanMel Partnership",
+          "hi": "50% - 50% किसानमेल साझेदारी"
+        },
+        "button": {
+          "en": "Our Franchise",
+          "hi": "हमारी फ्रेंचाइज़ी"
+        }
+      }
+    ]
+  }
+  
