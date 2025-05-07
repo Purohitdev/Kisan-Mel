@@ -1,6 +1,9 @@
-// import React, { useLayoutEffect, useRef } from "react";
+
+
+// import React, { useLayoutEffect, useRef, useState, useEffect } from "react";
 // import gsap from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { useLanguage } from "../Lang"; // ✅ Global Language Context
 
 // gsap.registerPlugin(ScrollTrigger);
 
@@ -14,9 +17,22 @@
 // ];
 
 // const Work: React.FC = () => {
+//   const { lang } = useLanguage(); // ✅ Correctly placed inside component
+
+//   const [textData, setTextData] = useState<{ heading: any; paragraph: any }>({
+//     heading: { en: "", hi: "" },
+//     paragraph: { en: "", hi: "" },
+//   });
+
 //   const containerRef = useRef(null);
 //   const wrapperRef = useRef<HTMLDivElement>(null);
 //   const boxRefs = useRef<HTMLDivElement[]>([]);
+
+//   useEffect(() => {
+//     fetch("/workData.json")
+//       .then((res) => res.json())
+//       .then((data) => setTextData(data));
+//   }, []);
 
 //   useLayoutEffect(() => {
 //     const ctx = gsap.context(() => {
@@ -71,15 +87,15 @@
 //       <div className="h-auto md:h-[20vh] px-6 py-4 flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
 //         <div className="flex flex-col gap-2">
 //           <h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] leading-none font-bold">
-//             How We Are Helping Farmers
+//             {textData.heading[lang]}
 //           </h1>
 //         </div>
 //         <p className="text-base sm:text-lg md:text-base md:w-[30%]">
-//           At KisanMel, we analyze your farm and climate to guide profitable crop choices and provide all essentials through our dedicated agri-showrooms.
+//           {textData.paragraph[lang]}
 //         </p>
 //       </div>
 
-//       {/* Scroll Boxes */}
+//       {/* Scrollable Boxes */}
 //       <div
 //         ref={wrapperRef}
 //         className="md:h-[70vh] flex items-center gap-4 md:gap-8 relative w-max mt-[30px] px-[40vw] md:px-[50vw]"
@@ -105,9 +121,10 @@
 import React, { useLayoutEffect, useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useLanguage } from "../Lang"; // ✅ Global Language Context
+import Draggable from "gsap/Draggable";
+import { useLanguage } from "../Lang";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, Draggable);
 
 const workBoxes = [
   { img: "/step1.png" },
@@ -119,7 +136,7 @@ const workBoxes = [
 ];
 
 const Work: React.FC = () => {
-  const { lang } = useLanguage(); // ✅ Correctly placed inside component
+  const { lang } = useLanguage();
 
   const [textData, setTextData] = useState<{ heading: any; paragraph: any }>({
     heading: { en: "", hi: "" },
@@ -137,44 +154,59 @@ const Work: React.FC = () => {
   }, []);
 
   useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      const wrapper = wrapperRef.current;
-      if (!wrapper) return;
+    const wrapper = wrapperRef.current;
+    const container = containerRef.current;
+    if (!wrapper || !container) return;
 
+    const ctx = gsap.context(() => {
+      const isMobile = window.innerWidth < 768;
       const totalScroll = wrapper.scrollWidth - window.innerWidth;
 
-      ScrollTrigger.create({
-        trigger: containerRef.current,
-        start: "top top",
-        end: `+=${totalScroll}`,
-        scrub: 1,
-        pin: true,
-        anticipatePin: 1,
-        animation: gsap.to(wrapper, {
-          x: -totalScroll,
-          ease: "power1.out",
-        }),
-        onUpdate: () => {
-          const center = window.innerWidth / 2;
+      // Function to highlight focused box
+      const updateFocus = () => {
+        const center = window.innerWidth / 2;
 
-          requestAnimationFrame(() => {
-            boxRefs.current.forEach((box) => {
-              const rect = box.getBoundingClientRect();
-              const boxCenter = rect.left + rect.width / 2;
-              const distance = Math.abs(center - boxCenter);
-              const isFocused = distance < rect.width / 2;
+        boxRefs.current.forEach((box) => {
+          const rect = box.getBoundingClientRect();
+          const boxCenter = rect.left + rect.width / 2;
+          const distance = Math.abs(center - boxCenter);
+          const isFocused = distance < rect.width / 2;
 
-              box.classList.toggle("blur-none", isFocused);
-              box.classList.toggle("opacity-100", isFocused);
-              box.classList.toggle("scale-100", isFocused);
+          box.classList.toggle("blur-none", isFocused);
+          box.classList.toggle("opacity-100", isFocused);
+          box.classList.toggle("scale-100", isFocused);
 
-              box.classList.toggle("blur-sm", !isFocused);
-              box.classList.toggle("opacity-50", !isFocused);
-              box.classList.toggle("scale-95", !isFocused);
-            });
-          });
-        },
-      });
+          box.classList.toggle("blur-sm", !isFocused);
+          box.classList.toggle("opacity-50", !isFocused);
+          box.classList.toggle("scale-95", !isFocused);
+        });
+      };
+
+      if (isMobile) {
+        // ✅ Enable drag on mobile
+        Draggable.create(wrapper, {
+          type: "x",
+          bounds: { minX: -totalScroll, maxX: 0 },
+          inertia: true,
+          onDrag: updateFocus,
+          onThrowUpdate: updateFocus,
+        });
+      } else {
+        // ✅ Enable scroll + ScrollTrigger on desktop
+        ScrollTrigger.create({
+          trigger: container,
+          start: "top top",
+          end: `+=${totalScroll}`,
+          scrub: 1,
+          pin: true,
+          anticipatePin: 1,
+          animation: gsap.to(wrapper, {
+            x: -totalScroll,
+            ease: "power1.out",
+            onUpdate: updateFocus,
+          }),
+        });
+      }
     }, containerRef);
 
     return () => ctx.revert();
@@ -197,10 +229,10 @@ const Work: React.FC = () => {
         </p>
       </div>
 
-      {/* Scrollable Boxes */}
+      {/* Scrollable / Draggable Boxes */}
       <div
         ref={wrapperRef}
-        className="md:h-[70vh] flex items-center gap-4 md:gap-8 relative w-max mt-[30px] px-[40vw] md:px-[50vw]"
+        className="md:h-[70vh] flex items-center gap-4 md:gap-8 relative w-max mt-[30px] px-[40vw] md:px-[50vw] cursor-grab active:cursor-grabbing"
       >
         {workBoxes.map((box, i) => (
           <div
